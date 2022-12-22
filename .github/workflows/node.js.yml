@@ -23,10 +23,10 @@ jobs:
         node-version: '14.17.3'
         cache: 'npm'
     - name: Install dependencies
-    - run: npm ci
-    - name: Build
-    - run: npm run ng build --configuration production
-    - name: Deploy to GitHub Pages
+      run: npm ci
+    - name: Build dmk-wing
+      run: npm run build:ci
+    - name: Deploy to GitHub Pages of dmk-wing
       uses: crazy-max/ghaction-github-pages@v3
       with:
           target_branch: gh-pages
