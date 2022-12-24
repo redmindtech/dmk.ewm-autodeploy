@@ -29,6 +29,6 @@ jobs:
     - name: Deploy to GitHub Pages of dmk-wing
       uses: crazy-max/ghaction-github-pages@v3
       with:
-          repo-token: ${{ secrets.REDMIND_DMK }}
-          target_branch: gh-pages
-          build_dir: dist/sakai-ng
+          GITHUB_TOKEN: ${{ secrets.REDMIND_DMK }}
+          BRANCH: gh-pages
+          FOLDER: dist/sakai-ng
